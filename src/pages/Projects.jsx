@@ -8,7 +8,6 @@ import ProjectCard from "../components/ProjectCard"; // We will create this comp
 const API_URL = "https://portfolio-backend-1-sx2x.onrender.com/api/v1/projects";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  console.log(projects);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
