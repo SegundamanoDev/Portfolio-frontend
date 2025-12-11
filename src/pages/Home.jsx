@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SocialLinks from "../components/SocialLinks"; // <-- NEW Import
+import SocialLinks from "../components/SocialLinks";
 
 const Home = () => {
   return (
