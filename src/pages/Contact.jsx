@@ -5,6 +5,8 @@ import { FiSend } from "react-icons/fi";
 // Define the base URL for the contact API endpoint
 const API_URL = "https://portfolio-backend-1-sx2x.onrender.com/api/v1/contact";
 
+// "http://localhost:5000/api/v1/contact";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,7 +18,7 @@ const Contact = () => {
     type: "",
     text: "",
   });
-
+  console.log(responseMessage);
   // Handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
