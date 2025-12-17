@@ -61,7 +61,7 @@ const Header = () => {
           ))}
           {/* Resume Button */}
           <a
-            href="/resume-wellington-2025-v2.pdf"
+            href="/wellington-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClasses}
