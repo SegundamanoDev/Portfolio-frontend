@@ -8,75 +8,86 @@ const ProjectCard = ({ project }) => {
   const hasValidImage =
     image && image !== "no-photo.jpg" && image.startsWith("http");
 
+  // Determine the primary destination
+  const mainLink = liveLink || githubLink;
+
+  // Function to handle clicks on the links/icons to prevent them from
+  // triggering the main card's redirect
+  const handleChildClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div
-      className="bg-sapphire-bg p-6 rounded-lg shadow-xl hover:shadow-2xl 
-                   transition duration-300 transform hover:-translate-y-1 
-                   flex flex-col h-full border border-sapphire-bg hover:border-mint-accent/50"
+    <a
+      href={mainLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block h-full group" // Group allows us to trigger effects on children
     >
-      {hasValidImage && (
-        <a
-          href={liveLink || githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`View ${title} project`}
-          className="block mb-4 rounded-md overflow-hidden aspect-video group"
-        >
-          <img
-            src={image}
-            alt={`Screenshot of ${title}`}
-            // Styling for smooth hover effect and consistent aspect ratio
-            className="w-full h-full object-cover transition duration-500 group-hover:scale-[1.03]"
-          />
-        </a>
-      )}
+      <div
+        className="bg-sapphire-bg p-6 rounded-lg shadow-xl hover:shadow-2xl 
+                   transition duration-300 transform hover:-translate-y-2 
+                   flex flex-col h-full border border-sapphire-bg hover:border-mint-accent/50"
+      >
+        {hasValidImage && (
+          <div className="block mb-4 rounded-md overflow-hidden aspect-video">
+            <img
+              src={image}
+              alt={`Screenshot of ${title}`}
+              className="w-full h-full object-cover transition duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+        )}
 
-      <header className="mb-4 flex justify-between items-start">
-        <TbBulb size={30} className="text-mint-accent mt-1" />
-        <div className="flex space-x-3 text-slate-dark">
-          {/* Use the new property: githubLink */}
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Repository"
-              className="hover:text-mint-accent"
-            >
-              <FiGithub size={20} />
-            </a>
-          )}
-          {liveLink && (
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Live Demo Link"
-              className="hover:text-mint-accent"
-            >
-              <FiExternalLink size={20} />
-            </a>
-          )}
-        </div>
-      </header>
+        <header className="mb-4 flex justify-between items-start">
+          <TbBulb size={30} className="text-mint-accent mt-1" />
+          <div
+            className="flex space-x-3 text-slate-dark"
+            onClick={handleChildClick}
+          >
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+                className="hover:text-mint-accent transition-colors"
+              >
+                <FiGithub size={20} />
+              </a>
+            )}
+            {liveLink && (
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Live Demo Link"
+                className="hover:text-mint-accent transition-colors"
+              >
+                <FiExternalLink size={20} />
+              </a>
+            )}
+          </div>
+        </header>
 
-      <h4 className="text-2xl font-bold text-slate-light mb-2 hover:text-mint-accent transition duration-300">
-        {title}
-      </h4>
+        {/* Highlighting the title when the whole card is hovered */}
+        <h4 className="text-2xl font-bold text-slate-light mb-2 group-hover:text-mint-accent transition duration-300">
+          {title}
+        </h4>
 
-      <p className="text-slate-dark text-base mb-4 grow">{summary}</p>
+        <p className="text-slate-dark text-base mb-4 grow">{summary}</p>
 
-      <footer className="mt-auto">
-        {/* Use the new property: techStack */}
-        <ul className="flex flex-wrap text-xs font-mono text-slate-dark space-x-4">
-          {techStack.map((tech, index) => (
-            <li key={index} className="opacity-75" title={tech}>
-              {tech}
-            </li>
-          ))}
-        </ul>
-      </footer>
-    </div>
+        <footer className="mt-auto">
+          <ul className="flex flex-wrap text-xs font-mono text-slate-dark">
+            {techStack.map((tech, index) => (
+              <li key={index} className="mr-4 mb-1 opacity-75" title={tech}>
+                {tech}
+              </li>
+            ))}
+          </ul>
+        </footer>
+      </div>
+    </a>
   );
 };
 
