@@ -27,7 +27,7 @@ const Home = () => {
             I am a <span className="text-slate-light font-semibold">Full Stack Developer</span> specializing in 
             the MERN stack with a focus on <span className="text-mint-accent">Fintech and SaaS.</span>  
             I engineer secure, scalable systems featuring complex 
-            <span className="text-mint-accent"> authentication, RBAC, and transaction-based workflows.</span> [cite: 7]
+            <span className="text-mint-accent"> authentication, RBAC, and transaction-based workflows.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start">
