@@ -1,25 +1,18 @@
 import React from "react";
 
-// Refined technologies focusing on your MERN core from the resume
 const skills = [
-  "JavaScript (ES6+)",
+  "React.js & Next.js",
   "TypeScript",
-  "React.js",
-  "Node.js",
-  "Express.js",
-  "NestJS",
-  "MongoDB",
-  "MySQL",
-  "RESTful APIs",
-  "Next.js",
+  "Node.js & NestJS",
   "Redux Toolkit",
-  "Tailwind CSS",
-  "Material UI (MUI)",
+  "MongoDB & MySQL",
+  "RESTful APIs",
   "JWT Authentication",
   "RBAC (Access Control)",
-  "Git & GitHub",
+  "Socket.io",
   "System Design",
-  "Deployment (Vercel/Render)",
+  "CI/CD",
+  "Postman",
 ];
 
 const About = () => {
@@ -39,34 +32,26 @@ const About = () => {
             <p>
               Hello! I'm Wellington, a{" "}
               <span className="text-mint-accent">Full Stack Developer</span>{" "}
-              with hands-on experience building production-ready MERN
-              applications. My journey into software engineering began with a
-              deep curiosity for how the web works, leading me to pursue
-              intensive{" "}
-              <span className="text-mint-accent">self-directed learning</span>.
+              specializing in the MERN stack with a strong focus on 
+              <span className="text-mint-accent"> fintech and SaaS applications</span>.
             </p>
 
             <p>
-              My core focus is on building robust applications with a strong
-              emphasis on
+              My journey is rooted in intensive 
+              <span className="text-mint-accent"> self-directed software engineering study</span>, 
+              where I've mastered Computer Science fundamentals and modern web architecture 
+              to build production-ready systems.
+            </p>
+
+            <p>
+              I specialize in delivering secure, scalable projects featuring 
               <span className="text-mint-accent">
                 {" "}
-                authentication systems, transaction-based workflows, and
+                complex authentication, transaction-based workflows, and 
                 role-based access control (RBAC)
-              </span>
-              . I take pride in translating complex concepts into clean,
-              scalable architecture.
-            </p>
-
-            <p>
-              To date, I have successfully managed projects from concept to
-              deployment, focusing on performance and security. Whether it is
-              developing comprehensive
-              <span className="text-mint-accent"> dashboards</span> or
-              optimizing
-              <span className="text-mint-accent"> database schemas</span> in
-              MongoDB and MySQL, I enjoy solving technical challenges that
-              impact user experience.
+              </span>. 
+              My approach prioritizes clean architecture and optimized database design 
+              to ensure high performance and 99.9% uptime.
             </p>
 
             <p className="pt-4">
@@ -89,15 +74,11 @@ const About = () => {
           {/* --- Right Column: Photo --- */}
           <div className="md:col-span-1 flex justify-center items-start pt-4">
             <div className="relative w-full max-w-xs transition-all duration-300">
-              <div className="w-full pt-[100%] rounded-lg overflow-hidden relative">
+              <div className="w-full pt-[100%] rounded-lg overflow-hidden relative border-2 border-mint-accent/20">
                 <img
                   src="/wellington_headshot.jpg"
                   alt="Wellington Oluwasegun Akitikori"
                   className="absolute inset-0 w-full h-full object-cover rounded-lg filter grayscale hover:grayscale-0 transition duration-500"
-                  style={{
-                    clipPath:
-                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                  }}
                 />
               </div>
               <div className="absolute inset-0 rounded-lg border-2 border-mint-accent opacity-0 hover:opacity-100 transition duration-500 transform translate-x-3 translate-y-3 z-0 pointer-events-none"></div>
