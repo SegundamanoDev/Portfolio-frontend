@@ -61,7 +61,7 @@ const Header = () => {
           ))}
           {/* Resume Button */}
           <a
-            href="/wellington-resume.pdf"
+            href="/wellington-resume-new.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClasses}
@@ -100,7 +100,7 @@ const Header = () => {
             </Link>
           ))}
           <a
-            href="/wellington-resume.pdf"
+            href="/wellington-resume-new.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClasses + " mt-4"}

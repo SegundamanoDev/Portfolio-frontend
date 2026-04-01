@@ -22,12 +22,19 @@ const Home = () => {
             I build production-ready{" "}
             <span className="text-mint-accent">MERN Stack applications.</span>
           </h2>
-          
+
           <p className="text-slate-dark max-w-2xl mb-12 text-lg leading-relaxed">
-            I am a <span className="text-slate-light font-semibold">Full Stack Developer</span> specializing in 
-            the MERN stack with a focus on <span className="text-mint-accent">Fintech and SaaS.</span>  
-            I engineer secure, scalable systems featuring complex 
-            <span className="text-mint-accent"> authentication, RBAC, and transaction-based workflows.</span>
+            I am a{" "}
+            <span className="text-slate-light font-semibold">
+              Full Stack Developer
+            </span>{" "}
+            specializing in the MERN stack with a focus on{" "}
+            <span className="text-mint-accent">Fintech and SaaS.</span>I
+            engineer secure, scalable systems featuring complex
+            <span className="text-mint-accent">
+              {" "}
+              authentication, RBAC, and transaction-based workflows.
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start">
@@ -41,9 +48,9 @@ const Home = () => {
             >
               View My Projects
             </Link>
-            
-            <a 
-              href="/Wellington_Akitikori_Resume.pdf" 
+
+            <a
+              href="/wellington-resume-new.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-block px-8 py-4 text-slate-light 
